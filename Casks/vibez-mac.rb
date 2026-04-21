@@ -9,6 +9,11 @@ cask "vibez-mac" do
 
   app "Vibez.app"
 
+  postflight do
+    system_command "/usr/bin/xattr",
+                   args: ["-dr", "com.apple.quarantine", "#{appdir}/Vibez.app"]
+  end
+
   zap trash: [
     "~/Library/Preferences/io.bike-shed.vibez.mac.plist",
     "~/Library/HTTPStorages/io.bike-shed.vibez.mac",
