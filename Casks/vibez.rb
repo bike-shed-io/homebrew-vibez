@@ -2,10 +2,10 @@ cask "vibez" do
   version "0.1.3"
   sha256 "08b9a4e9bcc820e225f3cd8c5160ab50d9966fdcd9c8806fa4ee4e3d5ae83c45"
 
-  url "https://github.com/bike-shed-io/vibez-mac/releases/download/v#{version}/Vibez-macos-arm64.zip"
+  url "https://github.com/bike-shed-io/homebrew-vibez/releases/download/v#{version}/Vibez-macos-arm64.zip"
   name "Vibez"
   desc "Native menu bar app for Vibez radio"
-  homepage "https://github.com/bike-shed-io/vibez-mac"
+  homepage "https://github.com/bike-shed-io/homebrew-vibez"
 
   app "Vibez.app"
 
