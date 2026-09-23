@@ -7,16 +7,17 @@ cask "vibez-mac" do
   desc "Native menu bar app for Vibez radio"
   homepage "https://github.com/bike-shed-io/homebrew-vibez"
 
+  depends_on :macos
+
   app "Vibez.app"
 
-  postflight do
-    system_command "/usr/bin/xattr",
-                   args: ["-dr", "com.apple.quarantine", "#{appdir}/Vibez.app"]
+  postflight_steps do
+    run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "."], chdir: "{{appdir}}/Vibez.app"
   end
 
   zap trash: [
-    "~/Library/Preferences/io.bike-shed.vibez.mac.plist",
     "~/Library/HTTPStorages/io.bike-shed.vibez.mac",
-    "~/Library/WebKit/io.bike-shed.vibez.mac"
+    "~/Library/Preferences/io.bike-shed.vibez.mac.plist",
+    "~/Library/WebKit/io.bike-shed.vibez.mac",
   ]
 end
