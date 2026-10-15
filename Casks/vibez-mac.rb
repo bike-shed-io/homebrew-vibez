@@ -1,6 +1,6 @@
 cask "vibez-mac" do
-  version "0.1.15"
-  sha256 "d1658f760675846736636eb8362b74ece874ae021d191001b55d5bb63f416f1a"
+  version "0.1.16"
+  sha256 "88b2edb9dbe7cb7b3d15f7c444ddd34df8e080b16c9a07484e005038b18f02dd"
 
   url "https://github.com/bike-shed-io/homebrew-vibez/releases/download/v#{version}/Vibez-macos-arm64.zip"
   name "Vibez"
